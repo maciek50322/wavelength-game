@@ -20,7 +20,7 @@ export function Welcome(props: {
       <div class="text-6xl my-6 wrap-anywhere break-normal">
         Wavelength Game
         <div class="text-lg max-w-full break-normal wrap-anywhere text-secondary text-center mt-8">
-          Online multilpayer game to guess what others think.
+          Online multiplayer turn-based party game to guess what others think.
         </div>
       </div>
       <div class="flex justify-center mx-12">

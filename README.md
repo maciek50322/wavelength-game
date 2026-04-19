@@ -1,6 +1,9 @@
 # Wavelength Game
 
-Online multiplayer turn-based party game. The point is to guess what other players think or make it difficult (but not impossible) for others to guess.
+Online multiplayer turn-based party game. The point is to guess what other players think or make it difficult (but not impossible) for others to guess what you think.
+
+Access the game here
+https://maciek50322.github.io/wavelength-game/
 
 ## Creating / joining a game
 
