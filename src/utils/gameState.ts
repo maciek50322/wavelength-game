@@ -12,8 +12,8 @@ export enum GamePhase {
   PlayersGuess,
 }
 export function getGamePhase(gs: PlayerGameState) {
-  // master sits, no topic yet
-  if (isFilled(gs.masterPlayerId) && isEmpty(gs.topic)) {
+  // round started, no topic yet
+  if (isFilled(gs.roundStartedTime) && isEmpty(gs.topic)) {
     return GamePhase.MasterPlayerSetup;
   }
   // topic defined, no shared result yet
@@ -297,6 +297,8 @@ export function createHostDataHandler(args: { gameId: string; name: string }) {
         });
 
         x.gameState.readyPlayerIds = [];
+        x.gameState.roundStartedTime = undefined;
+        x.gameState.answersStartedTime = undefined;
       }),
     );
 
@@ -314,6 +316,7 @@ export function createHostDataHandler(args: { gameId: string; name: string }) {
       produce((x) => {
         x.gameState.finalResults = undefined;
         x.gameState.readyPlayerIds = [];
+        x.gameState.roundStartedTime = undefined;
       }),
     );
 
