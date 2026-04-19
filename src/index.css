@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #c6c6c6;
+  --color-secondary: #909090;
+  --color-background: #121212;
+  --color-background-secondary: black;
+  --color-background-muted: #323232;
+  --color-warning: brown;
+  --color-success: green;
+  --color-accent: royalblue;
+}
+
+body {
+  background-color: var(--color-background) !important;
+  color: var(--color-primary);
+  font-family: sans-serif;
+  font-size: large;
+}
+
+* {
+  transition:
+    background-color 0.25s ease-out,
+    scale 0.1s ease-out;
+}
+
+input[type="range"].wavelength {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+input[type="range"].wavelength:focus {
+  outline: none;
+}
+input[type="range"].wavelength:disabled {
+  cursor: not-allowed;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+input[type="range"].wavelength::-webkit-slider-runnable-track {
+  background-color: var(--color-background-muted);
+  border-radius: 2rem;
+  height: 0.5rem;
+  margin: 0.5rem 0;
+}
+input[type="range"].wavelength::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px;
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 1rem;
+  outline: 1px solid var(--color-accent);
+}
+input[type="range"].wavelength:not(:disabled)::-webkit-slider-thumb:hover,
+input[type="range"].wavelength:focus:not(:disabled)::-webkit-slider-thumb {
+  scale: 1.2;
+}
+input[type="range"].wavelength:active:not(:disabled)::-webkit-slider-thumb {
+  scale: 0.9;
+}
+input[type="range"].wavelength:disabled::-webkit-slider-thumb {
+  background-color: var(--color-accent);
+  outline: 1px solid var(--color-primary);
+}
+/*********** Firefox styles ***********/
+input[type="range"].wavelength::-moz-range-track {
+  background-color: var(--color-background-muted);
+  border-radius: 2rem;
+  height: 0.5rem;
+}
+input[type="range"].wavelength::-moz-range-thumb {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 1rem;
+}
+input[type="range"].wavelength:not(:disabled)::-moz-range-thumb:hover,
+input[type="range"].wavelength:focus:not(:disabled)::-moz-range-thumb {
+  scale: 1.2;
+}
+input[type="range"].wavelength:active:not(:disabled)::-moz-range-thumb {
+  scale: 0.9;
+}
+input[type="range"].wavelength:disabled::-moz-range-thumb {
+  background-color: var(--color-accent);
+  outline: 1px solid var(--color-secondary);
+}
+
+button {
+  font-size: large;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: none;
+  outline: 1px solid var(--color-secondary);
+  cursor: pointer;
+}
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+  background-color: var(--color-background-secondary);
+  scale: 1.1;
+}
+button:active:not(:disabled) {
+  outline: 1px solid var(--color-primary);
+  background-color: var(--color-secondary);
+  scale: 0.9;
+}
+
+button:disabled {
+  outline: 1px solid var(--color-primary);
+  background-color: var(--color-background-muted);
+  cursor: not-allowed;
+}
+
+input[type="text"] {
+  font-size: large;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: none;
+  outline: 1px solid var(--color-secondary);
+}
+
+input[type="text"]:hover:not(:disabled) {
+  background-color: var(--color-background-secondary);
+}
+
+input[type="text"]:focus {
+  outline: 1px solid var(--color-primary);
+  background-color: var(--color-background-secondary);
+}
+input[type="text"]:disabled {
+  outline: 1px solid var(--color-primary);
+  background-color: var(--color-background-muted);
+  cursor: not-allowed;
+}
+
+.clickable-text {
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+.clickable-text:hover {
+  background-color: var(--color-background-muted);
+}
+.clickable-text:active {
+  background-color: var(--color-secondary);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.25rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-background-muted);
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
